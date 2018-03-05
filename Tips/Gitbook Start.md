@@ -29,4 +29,4 @@
     * `git add --a`  添加需要committed的文件，--a为所有文件
     * `git commit -m "description"`
     * `git push origin master` 上传到master分支
-7. (Optional)`gitbook serve` 开启本地服务，可直接在本地查看书籍效果 localhost:4000
+7. `gitbook serve` (Optional) 开启本地服务，可直接在本地查看书籍效果 localhost:4000
