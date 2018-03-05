@@ -2,5 +2,5 @@
 
 * [Introduction](README.md)
 * Tips
-    * [Gitbook Start](Foundation/Gitbook Start.md)
+    * [Gitbook Start](Tips/Gitbook Start.md)
 
