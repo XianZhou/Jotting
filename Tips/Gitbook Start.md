@@ -1,6 +1,6 @@
 # Gitbook Start
 
-## Gitbook的支持下载
+## Gitbook相关支持
 
 ## Gitbook与Github关联同步
 我的gitbook网址 https://www.gitbook.com/@xianzhou  
@@ -20,7 +20,7 @@
     git remote add origin https://github.com/XianZhou/hello.git  
     ```
 4. 通过 `git remote -v` 可以查看该仓库与远程仓库的关联，准备工作完成，以下是上传步骤
-5. 在Atom写好文字后，需要通过终端将其上传到远程仓库
+5. 在Atom写好内容后，需要通过终端将其上传到远程仓库
     * 将该仓库更新为一个gitbook项目： `gitbook init`       
         * 首次会生成README.md和SUMMARY.md，分别是作为书的介绍页和目录页
         * `README.md` 是gitbook上关于该书的描述，也是首页
