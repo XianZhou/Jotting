@@ -15,7 +15,7 @@ SETTINGS -> Applications -> Installed Github Apps -> Configure
 ## 使用Atom写书并完成首次上传
 1. 创建任意文件夹，如Gitbook，为方便管理，里面创建各种书的子文件夹
 2. 终端进入该书籍目录，将该目录创建为一个git项目：git init，通过ls -a可以看到隐藏的.git文件夹
-3. 然后为本地仓库关联一个远程仓库，并将其命名为 origin 即远程主机名                
+3. 然后为本地仓库关联一个远程仓库，并将其命名为 origin                    
     ```Shell
     git remote add origin https://github.com/XianZhou/nihao.git  
     ```
@@ -25,6 +25,6 @@ SETTINGS -> Applications -> Installed Github Apps -> Configure
 6. gitbook serve 开启本地服务，可直接在本地查看书籍效果
 7. 在Atom写好文字后，需要通过终端将其上传到远程仓库
   * git status   查看变动
-  * git add --a  添加需要committed的文件，--a为所有文件
-  * git commit -m "description"
-  * git push origin master 上传到master分支
+  * git add --a  将所有新建或删除的文件加入仓库
+   * git commit -m "description"
+   * git push origin master 上传到master分支
