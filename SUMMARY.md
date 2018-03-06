@@ -2,6 +2,6 @@
 
 * [Introduction](README.md)
 * Tips
-    * [Gitbook](Tips/Gitbook Start.md)
+    * [Gitbook Start](Tips/Gitbook_Start.md)
     * [ZSH](Tips/ZSH.md)
 
