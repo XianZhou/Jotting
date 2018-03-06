@@ -1,6 +1,6 @@
-# 1. Gitbook Start
+# Gitbook Start
 
-## Gitbook相关支持
+## 1. Gitbook相关支持
 1. 下载[Homebrew](https://brew.sh/index_zh-cn.html)，这是macOS缺失的软件包管理器，类似于Ubuntu的apt-get，可以通过简单的命名行下载依赖库，以解决软件安装过程的依赖关系
 
   * 安装
@@ -30,7 +30,7 @@ Homebrew/homebrew-core (git revision c281; last commit 2018-03-05)
   * ```gitbook -V``` 查看安装版本
   * ```npm uninstall -g gitbook``` 卸载Gitbook
 
-## Gitbook与Github关联同步
+## 2. Gitbook与Github关联同步
 我的gitbook网址 https://www.gitbook.com/@xianzhou    
 我的github网址  https://github.com/XianZhou
 
@@ -40,7 +40,7 @@ Homebrew/homebrew-core (git revision c281; last commit 2018-03-05)
    在Repository access中选择可被Gitbook访问到的仓库名字，然后保存
 3. 进入gitbook的新书中，SETTINGS -> Github 选择一个可访问的仓库进行同步，点击Sync，点击图标，同步成功
 
-## 使用Atom写书并完成上传
+## 3. 使用Atom写书并完成上传
 1. 创建任意文件夹，如Gitbook，为方便管理，里面创建各种书的子文件夹
 2. 终端进入该书籍目录，将该目录创建为一个git项目： `git init` ，通过 `ls -a` 可以看到隐藏的.git文件夹
 3. 然后为本地仓库关联一个远程仓库，并将其命名为 `origin` 即远程主机名                
