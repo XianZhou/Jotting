@@ -24,11 +24,12 @@ Shell俗称壳（用来区别于核），是指“提供使用者使用界面”
   ZSH的配置很复杂，一般基于一个国外大神的开源项目 [Oh My ZSH](http://ohmyz.sh) 进行配置</br>
 
 ### 安装
-1. 下载zsh
+#### 1. 下载zsh
   * Mac自带不用下
   * Redhat Linux，执行：sudo yum install zsh
   * Ubuntu Linux，执行：sudo apt-get install zsh
-2. Oh My ZSH 安装
+
+#### 2. Oh My ZSH 安装
   * 通过git下载项目
   ```
   git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
@@ -41,7 +42,8 @@ Shell俗称壳（用来区别于核），是指“提供使用者使用界面”
   ```
   chsh -s /bin/zsh
   ```
-3. zsh配置文件 <br/>
+
+#### 3. zsh配置文件 <br/>
 配置文件在 ```~/.zshrc``` 里，可以在这里进行主题等其他配置的修改，如
 ```
 # Set name of the theme to load. Optionally, if you set this to "random"
