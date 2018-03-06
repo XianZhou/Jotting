@@ -1,11 +1,38 @@
-# Gitbook Start
+# 1. Gitbook Start
 
 ## Gitbook相关支持
-1. 
+1. 下载[Homebrew](https://brew.sh/index_zh-cn.html)，这是macOS缺失的软件包管理器，类似于Ubuntu的apt-get，可以通过简单的命名行下载依赖库，以解决软件安装过程的依赖关系
+
+  * 安装
+  ```
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  ```
+  * 查看版本
+  ```
+  ➜  ~ brew -v      
+Homebrew 1.5.8
+Homebrew/homebrew-core (git revision c281; last commit 2018-03-05)
+  ```
+2. 下载Node.js
+  ```
+  ➜  ~ brew install node
+  ```
+  安装了node后会自带npm，npm是随同Node.js一起安装的包管理工具，能解决Node.js代码部署上的很多问题，可通过以下命名查看安装版本
+  ```
+  ➜  ~ npm -v
+  5.6.0
+  ➜  ~ node -v
+  v9.4.0
+  ```
+3. 使用npm安装Gitbook
+  * ```npm install gitbook -g``` 命令行安装gitbook
+  * ```npm install -g gitbook-cli``` 安装gitbook的命令行工具
+  * ```gitbook -V``` 查看安装版本
+  * ```npm uninstall -g gitbook``` 卸载Gitbook
 
 ## Gitbook与Github关联同步
-我的gitbook网址 https://www.gitbook.com/@xianzhou  
-我的github网址 https://github.com/XianZhou
+我的gitbook网址 https://www.gitbook.com/@xianzhou    
+我的github网址  https://github.com/XianZhou
 
 1. 在gitbook上创建一本新书（Book & Manual），普通用户的书籍权限都是public
 2. 在github上新建一个仓库（Repositories），在用户设置中   
@@ -31,3 +58,6 @@
     * `git commit -m "description"`
     * `git push origin master` 上传到master分支
 7. `gitbook serve` (Optional) 开启本地服务，可直接在本地查看书籍效果 localhost:4000
+
+### 2018年3月5日 —— #1
+#### 感谢晓芳学姐带本小白入门并对本篇文章的大力支持～
