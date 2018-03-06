@@ -34,7 +34,7 @@ Homebrew/homebrew-core (git revision c281; last commit 2018-03-05)
 我的gitbook网址 https://www.gitbook.com/@xianzhou    
 我的github网址  https://github.com/XianZhou
 
-1. 在gitbook上创建一本新书（Book & Manual），普通用户的书籍权限都是public
+1. 在gitbook上创建一本新书（Book&Manual），普通用户的书籍权限都是public
 2. 在github上新建一个仓库（Repositories），在用户设置中   
    SETTINGS -> Applications -> Installed Github Apps -> Configure
    在Repository access中选择可被Gitbook访问到的仓库名字，然后保存
