@@ -1,7 +1,7 @@
 # Git的用法
 
 ## 1. Git介绍
-Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件，采用了分布式版本库的方式，不必服务器端软件支持.
+Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件，采用了分布式版本库的方式，不必服务器端软件支持
 ####  Git和SVN的比较
 在整理Git介绍的时候看到了很多文章将Git与SVN进行对比，虽然我之前并没有接触过SVN，但是从这些比较中能够比较好的了解到Git的一些特性，于是将其主要区别汇总如下：
   * Git是分布式的，而SVN是集中式
@@ -21,16 +21,35 @@ Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvald
   * 克隆 Git 资源作为工作目录
   * 在克隆的资源上添加或修改文件
   * 如果其他人修改了，你可以更新资源
-  * 在提交前查看修改222
-  * 提交修改...
-  * 在修改完成后，如果发现错误，可以撤回提交并再次修改并提交...
+  * 在提交前查看修改
+  * 提交修改
+  * 在修改完成后，如果发现错误，可以撤回提交并再次修改并提交
 
 ## 3. Git工作区、暂存区和版本库
   * 工作区：电脑上能看到的目录
-  * 暂存区：英文叫stage, 或index；一般存放在 ".git目录下" 下的index文件（.git/index）中，所以我们有时也把暂存区叫作索引（index）...
-  * 版本库：工作区有一个隐藏目录.git，这个不算工作区，而是Git...111
+  * 暂存区：英文叫stage, 或index；一般存放在 ".git目录下" 下的index文件（.git/index）中，所以我们有时也把暂存区叫作索引（index）
+  * 版本库：工作区有一个隐藏目录.git，这个不算工作区，而是Git版本库
 
   ![git_flow](https://raw.githubusercontent.com/XianZhou/Jotting/master/img/git_flow.png)
+
+## 6. 冲突解决
+在多人共同操作一个分支的时候，本地提交后push到远程仓库时会出现冲突，例如：A完成本地commit，并且将代码push到远程仓库的dev分支；然后B也完成了本地commit，准备将代码push到远程仓库的dev分支，根据以上场景进行如下讨论：
+  * 首先，B需要从远程拉去该分支的最新代码，进行git pull操作
+  * 进行git pull操作时，有时会直接拉取成功，这是因为进行了auto-merging，并且成功
+  ```
+  ➜  Jotting git:(master) git pull origin master
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (4/4), done.
+Unpacking objects: 100% (4/4), done.
+remote: Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+From https://github.com/XianZhou/Jotting
+ * branch            master     -> FETCH_HEAD
+   766ad71..2cca594  master     -> origin/master
+Auto-merging Tips/Git.md
+Merge made by the 'recursive' strategy.
+ Tips/Git.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+  ```
 
 
 
