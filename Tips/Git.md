@@ -1,11 +1,7 @@
 # Git的用法
 
 ## 1. Git介绍
-<<<<<<< HEAD
 Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件，采用了分布式版本库的方式，不必服务器端软件支持
-=======
-Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件，采用了分布式版本库的方式，不必服务器端软件支持...
->>>>>>> a59780fe9dd963021636fd1f708daeb09824ea7c
 ####  Git和SVN的比较
 在整理Git介绍的时候看到了很多文章将Git与SVN进行对比，虽然我之前并没有接触过SVN，但是从这些比较中能够比较好的了解到Git的一些特性，于是将其主要区别汇总如下：
   * Git是分布式的，而SVN是集中式
@@ -39,7 +35,7 @@ Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvald
 ## 6. 冲突解决
 在多人共同操作一个分支的时候，本地提交后push到远程仓库时会出现冲突，例如：A完成本地commit，并且将代码push到远程仓库的dev分支；然后B也完成了本地commit，准备将代码push到远程仓库的dev分支，根据以上场景进行如下讨论：
   * 首先，B需要从远程拉去该分支的最新代码，进行git pull操作
-  * 进行git pull操作时，有时会直接拉取成功，这是因为进行了auto-merging，并且成功
+  * 进行git pull操作时，有时会直接拉取成功，这是因为进行了auto-merging，并且成功!!!
   ```
   ➜  Jotting git:(master) git pull origin master
 remote: Counting objects: 4, done.
