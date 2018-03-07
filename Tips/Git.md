@@ -35,7 +35,7 @@ Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvald
 ## 6. 冲突解决
 在多人共同操作一个分支的时候，本地提交后push到远程仓库时会出现冲突，例如：A完成本地commit，并且将代码push到远程仓库的dev分支；然后B也完成了本地commit，准备将代码push到远程仓库的dev分支，根据以上场景进行如下讨论：
   * 首先，B需要从远程拉去该分支的最新代码，进行git pull操作
-  * 进行git pull操作时，有时会直接拉取成功，这是因为进行了auto-merging，并且成功!!!
+  * 进行git pull操作时，有时会直接拉取成功，这是因为进行了auto-merging，并且成功...
   ```
   ➜  Jotting git:(master) git pull origin master
 remote: Counting objects: 4, done.
