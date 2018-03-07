@@ -22,13 +22,13 @@ Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvald
   * 在克隆的资源上添加或修改文件
   * 如果其他人修改了，你可以更新资源
   * 在提交前查看修改
-  * 提交修改222.
+  * 提交修改.
   * 在修改完成后，如果发现错误，可以撤回提交并再次修改并提交
 
 ## 3. Git工作区、暂存区和版本库
   * 工作区：电脑上能看到的目录
   * 暂存区：英文叫stage, 或index；一般存放在 ".git目录下" 下的index文件（.git/index）中，所以我们有时也把暂存区叫作索引（index）
-  * 版本库：工作区有一个隐藏目录.git，这个不算工作区，而是Git111111111111.
+  * 版本库：工作区有一个隐藏目录.git，这个不算工作区，而是Git版本库.
 
   ![git_flow](https://raw.githubusercontent.com/XianZhou/Jotting/master/img/git_flow.png)
 
