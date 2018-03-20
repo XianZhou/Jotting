@@ -30,12 +30,14 @@ Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvald
   * 暂存区：英文叫stage, 或index；一般存放在 ".git目录下" 下的index文件（.git/index）中，所以我们有时也把暂存区叫作索引（index）
   * 版本库：工作区有一个隐藏目录.git，这个不算工作区，而是Git版本库
 
-  ![git_flow](https://raw.githubusercontent.com/XianZhou/Jotting/master/img/git_flow.png)
+  ![git_flow](https://github.com/XianZhou/Jotting/blob/master/img/git_flow.jpg)
 
 ## 6. 冲突解决
 在多人共同操作一个分支的时候，本地提交后push到远程仓库时会出现冲突，例如：A完成本地commit，并且将代码push到远程仓库的dev分支；然后B也完成了本地commit，准备将代码push到远程仓库的dev分支，根据以上场景进行如下讨论：
   * 首先，B需要从远程拉去该分支的最新代码，进行git pull操作
-  * 进行git pull操作时，有时会直接拉取成功，这是因为进行了auto-merging，并且成功~~~
+  * git pull = git fetch + git merge FETCH_HEAD
+  * 进行git pull操作时，有时会直接拉取成功，进行了auto-merging，并且成功~~~
+
   ```
   ➜  Jotting git:(master) git pull origin master
 remote: Counting objects: 4, done.
@@ -50,6 +52,20 @@ Merge made by the 'recursive' strategy.
  Tips/Git.md | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
   ```
+
+ * 不成功的情况
+
+ ```
+ ➜  Jotting git:(master) git pull origin master:master
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+From https://github.com/XianZhou/Jotting
+ ! [rejected]        master     -> master  (non-fast-forward)
+   63c9a5c..a59780f  master     -> origin/master
+ ```
+ 很神奇的现象
 
 
 
