@@ -120,7 +120,26 @@ From https://github.com/XianZhou/Jotting
 
 ### 6.2 版本回滚
 如果需要回滚到之前提交的版本，步骤如下：
-  * 通过 ``` git reflog ``` 查看所有分支的操作记录，包括commit和reset操作。 ```git log``` 与其不同的地方在于无法查看已删除的操作记录、无法看到reset操作
+  * 通过 ``` git reflog ``` 查看所有分支的操作记录，包括commit和reset操作
+  ```
+  eb53746 HEAD@{1}: commit: need reset
+  4b91e4d (HEAD -> master) HEAD@{2}: commit: begin
+  ```
+  * ``` git reset --hard 4b91e4d``` 回滚到commit为begin的提交状态，查看日志
+  ```
+  4b91e4d (HEAD -> master) HEAD@{0}: reset: moving to 4b91e4d
+  eb53746 HEAD@{1}: commit: need reset
+  4b91e4d (HEAD -> master) HEAD@{2}: commit: begin
+  ```
+  * 注意不推荐使用```git log```查看历史提交 与其不同的地方在于无法查看已删除的操作记录、无法看到reset操作
+  ```
+  commit 4b91e4d5c3308873cb1c21f99a664ffbe8c502c0 (HEAD -> master)
+  Author: xx <xxx.xxxx@xxx.com>
+  Date:   Thu Mar 22 18:39:40 2018 +0800
+
+      begin
+
+  ```
 
 
 
