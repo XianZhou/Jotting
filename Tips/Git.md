@@ -68,10 +68,10 @@ Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvald
   * ```git branch dev``` 创建新分支dev ```git branch -d dev``` 删除分支dev
   * ```git checkout dev``` 切换到分支dev，用该分支的 **最后提交** 的快照替换你的工作目录的内容
   * ```git checkout -b dev``` 新建dev分支并立即切换到该分支下
-  * ```git merge dev``` 将dev分支合并到当前分支
+  * ```git merge dev``` 将dev分支合并到当前分支，合并时遇到的冲突问题见[点击跳转](# 6)
 
 ## 6. Git相关场景说明
-### 6.1 冲突解决
+### 6.1 冲突解决 <span id="jump"></span>
 在多人共同操作一个分支的时候，本地提交后push到远程仓库时会出现冲突，例如：A完成本地commit，并且将代码push到远程仓库的dev分支；然后B也完成了本地commit，准备将代码push到远程仓库的dev分支，根据以上场景进行如下讨论：
   * 首先，B需要从远程拉去该分支的最新代码，进行git pull操作
   * git pull = git fetch + git merge FETCH_HEAD
@@ -104,12 +104,14 @@ From https://github.com/XianZhou/Jotting
    63c9a5c..a59780f  master     -> origin/master
    ```
 
-  * 当两次commit同时修改了某一内容时，会出现
+  * 当两次commit同时修改了某一内容时，会出现一下提示，这时需要我们手动对这些内容进行修改
   ```
   CONFLICT (content): Merge conflict in Tips/Git.md
   Automatic merge failed; fix conflicts and then commit the result.
   ```
-  这时需要我们手动对这些内容进行修改；找到这些有冲突的文件，对相应内容进行修改。
+    * 找到这些有冲突的文件，对相应内容进行修改
+    * ```git add Tips/Git.md``` 表示冲突已解决
+    * ```git commit``` 重新提交
 
 
 
