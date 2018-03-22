@@ -122,24 +122,42 @@ From https://github.com/XianZhou/Jotting
 如果需要回滚到之前提交的版本，步骤如下：
   * 通过 ``` git reflog ``` 查看所有分支的操作记录，包括commit和reset操作
   ```
-  eb53746 HEAD@{1}: commit: need reset
-  4b91e4d (HEAD -> master) HEAD@{2}: commit: begin
+  2883e5c (HEAD -> master) HEAD@{0}: commit: need reset
+  1af7672 HEAD@{1}: commit: begin
   ```
-  * ``` git reset --hard 4b91e4d``` 回滚到commit为begin的提交状态，查看日志
+  通过 ```git log``` 查看如下
   ```
-  4b91e4d (HEAD -> master) HEAD@{0}: reset: moving to 4b91e4d
-  eb53746 HEAD@{1}: commit: need reset
-  4b91e4d (HEAD -> master) HEAD@{2}: commit: begin
-  ```
-  * 注意不推荐使用```git log```查看历史提交 与其不同的地方在于无法查看已删除的操作记录、无法看到reset操作
-  ```
-  commit 4b91e4d5c3308873cb1c21f99a664ffbe8c502c0 (HEAD -> master)
-  Author: xx <xxx.xxxx@xxx.com>
-  Date:   Thu Mar 22 18:39:40 2018 +0800
+  commit 2883e5cdbf3391b442025e0e4b97445c3d0fa761 (HEAD -> master)
+  Author: 周晛 <xian.zhou@ninebot.com>
+  Date:   Thu Mar 22 18:47:59 2018 +0800
+
+      need reset
+
+  commit 1af7672fee2adb7558bd2143d246705613287fbb
+  Author: 周晛 <xian.zhou@ninebot.com>
+  Date:   Thu Mar 22 18:47:37 2018 +0800
 
       begin
-
   ```
+  * ``` git reset --hard 1af7672``` 回滚到commit为begin的提交状态，查看日志
+
+    * ```git reflog```
+    ```
+    1af7672 (HEAD -> master) HEAD@{0}: reset: moving to 1af7672
+    2883e5c HEAD@{1}: commit: need reset
+    1af7672 (HEAD -> master) HEAD@{2}: commit: begin
+    ```
+    * ```git log```
+    ```
+    commit 1af7672fee2adb7558bd2143d246705613287fbb (HEAD -> master)
+    Author: xx <xxx.xxxx@xxxxx.com>
+    Date:   Thu Mar 22 18:47:37 2018 +0800
+
+        begin
+    ```
+    通过比较可以看出 ```git reflog``` 能够完整的看到commit和reset的日志， 回滚时推荐使用
+  * 上传到线上仓库 ```git push -f origin master``` ，不加参数会报错
+
 
 
 
