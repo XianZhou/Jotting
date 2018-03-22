@@ -56,6 +56,7 @@ Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvald
 ### 4.6 git commit
   将缓存区内容添加到版本库中，加提交信息 ```git commit -m "description"``` <br>
   将工作区内容添加到版本库中，省略git add ```git commit -am "description"```
+  
 ### 4.7 git reset HEAD
   用于取消存在于暂存区的内容，``` git reset HEAD Tips/Git.md```<br/>
   相当于git add的逆操作
@@ -68,10 +69,14 @@ Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvald
   * ```git branch dev``` 创建新分支dev ```git branch -d dev``` 删除分支dev
   * ```git checkout dev``` 切换到分支dev，用该分支的 **最后提交** 的快照替换你的工作目录的内容
   * ```git checkout -b dev``` 新建dev分支并立即切换到该分支下
-  * ```git merge dev``` 将dev分支合并到当前分支，合并时遇到的冲突问题见[点击跳转](# 6)
+  * ```git merge dev``` 将dev分支合并到当前分支，合并时遇到的冲突问题见下一个章节
+### 5.2 提交历史
+  * ```git log``` 查看提交历史 ```git log --oneline``` 简介版
+  * ```git log --oneline --graph``` 查看历史的分支、合并信息，拓扑图
+  * ```git log --oneline --before={2.weeks.ago} --after={2017-02-11} --no-merges``` <br/> 查看 Git 项目中两周前且在2017年2月11日之后的所有提交
 
 ## 6. Git相关场景说明
-### 6.1 冲突解决 <span id="jump"></span>
+### 6.1 冲突解决
 在多人共同操作一个分支的时候，本地提交后push到远程仓库时会出现冲突，例如：A完成本地commit，并且将代码push到远程仓库的dev分支；然后B也完成了本地commit，准备将代码push到远程仓库的dev分支，根据以上场景进行如下讨论：
   * 首先，B需要从远程拉去该分支的最新代码，进行git pull操作
   * git pull = git fetch + git merge FETCH_HEAD
