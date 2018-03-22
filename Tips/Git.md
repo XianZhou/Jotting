@@ -156,7 +156,7 @@ From https://github.com/XianZhou/Jotting
         begin
     ```
     通过比较可以看出 ```git reflog``` 能够完整的看到commit和reset的日志， 回滚时推荐使用
-  * 上传到线上仓库 ```git push -f origin master``` ，不加参数会报错
+  * 上传到线上仓库 ```git push -f origin master``` ，不加参数会报错!!!
 
 
 
