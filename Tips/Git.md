@@ -74,6 +74,10 @@ Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvald
   * ```git log``` 查看提交历史 ```git log --oneline``` 简介版
   * ```git log --oneline --graph``` 查看历史的分支、合并信息，拓扑图
   * ```git log --oneline --before={2.weeks.ago} --after={2017-02-11} --no-merges``` <br/> 查看 Git 项目中两周前且在2017年2月11日之后的所有提交
+### 5.3 标签
+  * ```git tag -a v1``` 为当前版本建立一个名为 **v1** 的标签，会要求输入注释（类似commit）
+  * ```git tag -a v2 16ccb91``` 为16ccb91版本建立一个名为 **v2** 的标签
+  * ```git tag``` 查看所有标签
 
 ## 6. Git相关场景说明
 ### 6.1 冲突解决
