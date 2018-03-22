@@ -1,7 +1,7 @@
 # Git的用法
 
 ## 1. Git介绍
-Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件，采用了分布式版本库的方式，不必服务器端软件支持!
+Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件，采用了分布式版本库的方式，不必服务器端软件支持
 ####  Git和SVN的比较
 在整理Git介绍的时候看到了很多文章将Git与SVN进行对比，虽然我之前并没有接触过SVN，但是从这些比较中能够比较好的了解到Git的一些特性，于是将其主要区别汇总如下：
   * Git是分布式的，而SVN是集中式
@@ -104,7 +104,12 @@ From https://github.com/XianZhou/Jotting
    63c9a5c..a59780f  master     -> origin/master
    ```
 
-  * 当两次commit同时修改了某一内容时，会出现 Merge Conflict，这时需要我们手动对这些内容进行修改；找到这些有冲突的文件，对相应内容进行修改。
+  * 当两次commit同时修改了某一内容时，会出现
+  ```
+  CONFLICT (content): Merge conflict in Tips/Git.md
+  Automatic merge failed; fix conflicts and then commit the result.
+  ```
+  这时需要我们手动对这些内容进行修改；找到这些有冲突的文件，对相应内容进行修改。
 
 
 
