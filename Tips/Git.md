@@ -56,7 +56,7 @@ Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvald
 ### 4.6 git commit
   将缓存区内容添加到版本库中，加提交信息 ```git commit -m "description"``` <br>
   将工作区内容添加到版本库中，省略git add ```git commit -am "description"```
-  
+
 ### 4.7 git reset HEAD
   用于取消存在于暂存区的内容，``` git reset HEAD Tips/Git.md```<br/>
   相当于git add的逆操作
@@ -117,6 +117,10 @@ From https://github.com/XianZhou/Jotting
     * 找到这些有冲突的文件，对相应内容进行修改
     * ```git add Tips/Git.md``` 表示冲突已解决
     * ```git commit``` 重新提交
+
+### 6.2 版本回滚
+如果需要回滚到之前提交的版本，步骤如下：
+  * 通过 ``` git reflog ``` 查看所有分支的操作记录，包括commit和reset操作。 ```git log``` 与其不同的地方在于无法查看已删除的操作记录、无法看到reset操作
 
 
 
