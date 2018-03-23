@@ -84,11 +84,18 @@ Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvald
 ### 5.4 储藏 stash
   当工作进行到一半时，需要pull最新代码，但是因为工作未完成，并不想新commit；或者工作进行一半，需要对原代码进行紧急bug修复，均可通过此命令，回到上一次commit的状态，相当于将当前代码储藏在暂存区，而工作区回到commit时状态
   * ```git stash``` 暂存当前正在进行的工作，工作区回到上一次commit时状态
-  * ```git stash save "description"``` 暂存并且将本次暂存记录为description，方便管理
+  * ```git stash save "it has message"``` 暂存并且将本次暂存记录为description，方便管理
   * ```git stash list``` 打印stash栈中所有的信息
+  ```
+  stash@{0}: On master: it has message
+  stash@{1}: WIP on master: daff907 git
+  ```
   * ```git stash pop``` 从stash栈中恢复第一个stash，并且会在list中删除本次stash信息
-  * ```git stash apply stash@{1} ``` 从list中找到stash版本，恢复这个stash，不会在list中删除信息
+  * ```git stash apply stash@{1} ``` 从list中找到stash版本，恢复这个stash，不会删除list里的信息
   * ```git stash clear``` 清空stash栈
+
+### 5.5 github
+
 
 ## 6. Git相关场景说明
 ### 6.1 冲突解决
@@ -174,6 +181,11 @@ From https://github.com/XianZhou/Jotting
   * 上传到线上仓库 ```git push -f origin master``` ，不加参数会报错
 
   遗留一个问题：[公共远程分支版本回滚问题](http://blog.csdn.net/fuchaosz/article/details/52170105)
+
+## 7. 总结
+  最后附上琪栋大神给我的Git命令总结图，感谢大佬对我的很多帮助～
+
+  ![git_summary](https://raw.githubusercontent.com/XianZhou/Jotting/master/img/Git_Summary.jpeg)
 
 
 
