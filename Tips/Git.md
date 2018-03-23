@@ -106,6 +106,7 @@ Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvald
   另外，```git remote rm test``` 删除远程仓库 **test**
   * ```git pull origin master``` 从远程仓库 **origin** 拉取master分支并且合并到当前的工作区，相当于 ```git fetch``` + ```git merge```
   * ```git push origin master``` 将当前已提交的代码推送到远程仓库 **origin** 的master分支
+  * ```git rebase``` 
 
 
 ## 6. Git相关场景说明
