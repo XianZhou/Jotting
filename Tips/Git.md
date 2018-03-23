@@ -37,7 +37,7 @@ Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvald
     2. 执行 ```git commit``` 将暂存区的目录树写到对象库中，并且master会相应更新，master指向的目录树就是提交时暂存区的目录树
     3. ```git reset HEAD``` 将暂存区的目录树重写为master分支指向的目录树，工作区不受影响
     4. ```git checkout HEAD``` 会将master分支上的全部文件或部分文件替换暂存区和工作区的文件，非常危险，不仅清除工作区上未提交的改动，也清楚暂存区未提交的改动
-  * 暂存区的使用场景：```git stash``` 当工作进行到一半时，需要pull最新代码，但是因为工作未完成，并不想新commit；或者工作进行一半，需要对原代码进行紧急bug修复，均可通过此命令，回到上一次commit的状态，然后完成临时任务后，通过 ```git stash pop``` 恢复之前工作
+  * 暂存区的使用场景：```git stash```
 
 ## 4. Git基本命令
 ### 4.1 git init
@@ -70,16 +70,25 @@ Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvald
   * ```git checkout dev``` 切换到分支dev，用该分支的 **最后提交** 的快照替换你的工作目录的内容
   * ```git checkout -b dev``` 新建dev分支并立即切换到该分支下
   * ```git merge dev``` 将dev分支合并到当前分支，合并时遇到的冲突问题见下一个章节
+
 ### 5.2 提交历史
   * ```git log``` 查看提交历史 ```git log --oneline``` 简介版
   * ```git log --oneline --graph``` 查看历史的分支、合并信息，拓扑图
   * ```git log --oneline --before={2.weeks.ago} --after={2017-02-11} --no-merges``` <br/> 查看 Git 项目中两周前且在2017年2月11日之后的所有提交
+
 ### 5.3 标签
   * ```git tag -a v1``` 为当前版本建立一个名为 **v1** 的标签，会要求输入注释（类似commit）
   * ```git tag -a v2 16ccb91``` 为16ccb91版本建立一个名为 **v2** 的标签
   * ```git tag``` 查看所有标签
-### 5.4 储藏 stash
 
+### 5.4 储藏 stash
+  当工作进行到一半时，需要pull最新代码，但是因为工作未完成，并不想新commit；或者工作进行一半，需要对原代码进行紧急bug修复，均可通过此命令，回到上一次commit的状态，相当于将当前代码储藏在暂存区，而工作区回到commit时状态
+  * ```git stash``` 暂存当前正在进行的工作，工作区回到上一次commit时状态
+  * ```git stash save "description"``` 暂存并且将本次暂存记录为description，方便管理
+  * ```git stash list``` 打印stash栈中所有的信息
+  * ```git stash pop``` 从stash栈中恢复第一个stash，并且会在list中删除本次stash信息
+  * ```git stash apply stash@{1} ``` 从list中找到stash版本，恢复这个stash，不会在list中删除信息
+  * ```git stash clear``` 清空stash栈
 
 ## 6. Git相关场景说明
 ### 6.1 冲突解决
