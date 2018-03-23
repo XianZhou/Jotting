@@ -56,7 +56,6 @@ Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvald
 ### 4.6 git commit
   将缓存区内容添加到版本库中，加提交信息 ```git commit -m "description"``` <br>
   将工作区内容添加到版本库中，省略git add ```git commit -am "description"```
-
 ### 4.7 git reset HEAD
   用于取消存在于暂存区的内容，``` git reset HEAD Tips/Git.md```<br/>
   相当于git add的逆操作
@@ -95,6 +94,18 @@ Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvald
   * ```git stash clear``` 清空stash栈
 
 ### 5.5 github
+  远程仓库，实现共享和共同开发
+  * ``` git remote add test https://github.com/XianZhou/test.git``` 为当前本地仓库添加一个新的远程仓库，指定一个简单的别名 **test**，以便将来引用
+  * ```git remote -v``` 查看当前仓库配置了哪些远程仓库，-v参数可以看到每个别名的实际链接地址
+  ```
+  origin	https://github.com/XianZhou/Jotting.git (fetch)
+  origin	https://github.com/XianZhou/Jotting.git (push)
+  test	https://github.com/XianZhou/test.git (fetch)
+  test	https://github.com/XianZhou/test.git (push)
+  ```
+  另外，```git remote rm test``` 删除远程仓库 **test**
+  * ```git pull origin master``` 从远程仓库 **origin** 拉取master分支并且合并到当前的工作区，相当于 ```git fetch``` + ```git merge```
+  * ```git push origin master``` 将当前已提交的代码推送到远程仓库 **origin** 的master分支
 
 
 ## 6. Git相关场景说明
@@ -154,7 +165,7 @@ From https://github.com/XianZhou/Jotting
   Date:   Thu Mar 22 18:47:59 2018 +0800
 
       need reset
-      
+
   commit 1af7672fee2adb7558bd2143d246705613287fbb
   Author: xx <xxx.xxxx@xxxxx.com>
   Date:   Thu Mar 22 18:47:37 2018 +0800
