@@ -150,13 +150,13 @@ From https://github.com/XianZhou/Jotting
   通过 ```git log``` 查看如下
   ```
   commit 2883e5cdbf3391b442025e0e4b97445c3d0fa761 (HEAD -> master)
-  Author: 周晛 <xian.zhou@ninebot.com>
+  Author: xx <xxx.xxxx@xxxxx.com>
   Date:   Thu Mar 22 18:47:59 2018 +0800
 
       need reset
-
+      
   commit 1af7672fee2adb7558bd2143d246705613287fbb
-  Author: 周晛 <xian.zhou@ninebot.com>
+  Author: xx <xxx.xxxx@xxxxx.com>
   Date:   Thu Mar 22 18:47:37 2018 +0800
 
       begin
