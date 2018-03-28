@@ -30,7 +30,7 @@ Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvald
   * **暂存区**：英文叫stage, 或index；一般存放在 ".git目录下" 下的index文件（.git/index）中，所以我们有时也把暂存区叫作索引（index）
   * **版本库**：工作区有一个隐藏目录.git，这个不算工作区，而是Git版本库
 
-  ![git_flow](https://raw.githubusercontent.com/XianZhou/Jotting/master/img/git_flow.jpg)
+  ![git_flow](https://raw.githubusercontent.com/XianZhou/Jotting/master/img/git/git_flow.jpg)
     * 上图左边区域为工作区，右侧是版本库，其中index表示暂存区，objects为Git对象库，包含各种对象及内容
   * 说明
     1. 当工作区文件发生修改时，执行 ```git add``` 命令，会按指令更新暂存区的目录树，可通过 ```git status``` 查看前后变化。工作区修改的文件内容会被写入到对象库的一个新对象中，该对象ID被记录在暂存区的文件索引中
@@ -198,7 +198,7 @@ From https://github.com/XianZhou/Jotting
 ## 7. 总结
   最后附上琪栋大神给我的Git命令总结图，感谢大佬对我的很多帮助～
 
-  ![git_summary](https://raw.githubusercontent.com/XianZhou/Jotting/master/img/Git_Summary.jpeg)
+  ![git_summary](https://raw.githubusercontent.com/XianZhou/Jotting/master/img/git/git_summary.jpeg)
 
 
 
