@@ -54,8 +54,9 @@ Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvald
   查看git status的详细信息，默认为尚未缓存的改动<br/>
   查看已缓存的改动 ```git diff --cached```, 查看已缓存和未缓存的改动 ```git diff HEAD```
 ### 4.6 git commit
-  将缓存区内容添加到版本库中，加提交信息 ```git commit -m "description"``` <br>
-  将工作区内容添加到版本库中，省略git add ```git commit -am "description"```
+  * 将缓存区内容添加到版本库中，加提交信息 ```git commit -m "description"```
+  * 将工作区内容添加到版本库中，省略git add ```git commit -am "description"```
+  * ```git commit --amend``` 修改上一次的提交，与上次提交合并为一次提交
 ### 4.7 git reset HEAD
   用于取消存在于暂存区的内容，``` git reset HEAD Tips/Git.md```<br/>
   相当于git add的逆操作
