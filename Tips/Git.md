@@ -104,7 +104,7 @@ Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvald
     ➜  .ssh git config user.name
     周晛
     ➜  .ssh git config user.email
-    xian.zhou@ninebot.com!
+    xian.zhou@ninebot.com!!
 
     ```
 
