@@ -54,9 +54,10 @@ Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvald
   查看git status的详细信息，默认为尚未缓存的改动<br/>
   查看已缓存的改动 ```git diff --cached```, 查看已缓存和未缓存的改动 ```git diff HEAD```
 ### 4.6 git commit
-  * 将缓存区内容添加到版本库中，加提交信息 ```git commit -m "description"```
-  * 将工作区内容添加到版本库中，省略git add ```git commit -am "description"```
-  * ```git commit --amend``` 修改上一次的提交，与上次提交合并为一次提交
+  *  将缓存区内容添加到版本库中，加提交信息 ```git commit -m "description"```
+  *  将工作区内容添加到版本库中，省略git add ```git commit -am "description"```
+  *  ```git commit --amend``` 修改上一次的提交；会要求重新编辑上一次的提交说明，然后将两个提交合并为一次commit
+
 ### 4.7 git reset HEAD
   用于取消存在于暂存区的内容，``` git reset HEAD Tips/Git.md```<br/>
   相当于git add的逆操作
@@ -94,8 +95,19 @@ Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvald
   * ```git stash apply stash@{1} ``` 从list中找到stash版本，恢复这个stash，不会删除list里的信息
   * ```git stash clear``` 清空stash栈
 
-### 5.5 github
-  远程仓库，实现共享和共同开发
+### 5.5 GitHub
+  基于Git的远程仓库，可以实现共享和共同开发
+  * GitHub SSH Key认证 <br/>
+    为什么GitHub需要SSH Key呢？因为GitHub需要识别出你推送的提交确实是你推送的，而不是别人冒充的，而Git支持SSH协议，所以，GitHub只要知道了你的公钥，就可以确认只有你自己才能推送。当然，GitHub允许你添加多个Key。假定你有若干电脑，你一会儿在公司提交，一会儿在家里提交，只要把每台电脑的Key都添加到GitHub，就可以在每台电脑上往GitHub推送了。<br/>
+    可以通过 ```git config user.name``` 和 ```git config user.email``` 来获取当前电脑的SSH用户名和邮箱，当前SSH邮箱是纳恩博邮箱，而GitHub的仓库是本人的163邮箱。
+    ```
+    ➜  .ssh git config user.name
+    周晛
+    ➜  .ssh git config user.email
+    xian.zhou@ninebot.com
+
+    ```
+
   * ``` git remote add test https://github.com/XianZhou/test.git``` 为当前本地仓库添加一个新的远程仓库，指定一个简单的别名 **test**，以便将来引用
   * ```git remote -v``` 查看当前仓库配置了哪些远程仓库，-v参数可以看到每个别名的实际链接地址
   ```
@@ -224,6 +236,8 @@ From https://github.com/XianZhou/Jotting
 Git教程 http://www.runoob.com/git/git-tutorial.html <br/>
 详细透彻解读Git与SVN的区别（集中式VS分布式）：<br/>
 http://blog.csdn.net/hellow__world/article/details/72529022 <br/>
-如何理解 Git 的分布式？：https://www.zhihu.com/question/20093241
-git merge 和 git rebase 小结 https://blog.csdn.net/wh_19910525/article/details/7554489
+如何理解 Git 的分布式？：https://www.zhihu.com/question/20093241 <br/>
+git merge 和 git rebase 小结 <br/> https://blog.csdn.net/wh_19910525/article/details/7554489 <br/>
+git 通过ssh 进行认证连接进行认证连接 <br/>
+https://www.jianshu.com/p/ee27cd2cf8b0 <br/>
 ### 2018年3月6日 —— #3
