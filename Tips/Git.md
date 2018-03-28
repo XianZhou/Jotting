@@ -239,11 +239,11 @@ From https://github.com/XianZhou/Jotting
 
 
 ### 参考
-Git教程 http://www.runoob.com/git/git-tutorial.html <br/>
-详细透彻解读Git与SVN的区别（集中式VS分布式）：<br/>
+1. Git教程 http://www.runoob.com/git/git-tutorial.html <br/>
+2. 详细透彻解读Git与SVN的区别（集中式VS分布式）：<br/>
 http://blog.csdn.net/hellow__world/article/details/72529022 <br/>
-如何理解 Git 的分布式？：https://www.zhihu.com/question/20093241 <br/>
-git merge 和 git rebase 小结 <br/> https://blog.csdn.net/wh_19910525/article/details/7554489 <br/>
-git 通过ssh 进行认证连接进行认证连接 <br/>
+3. 如何理解 Git 的分布式？：https://www.zhihu.com/question/20093241 <br/>
+4. git merge 和 git rebase 小结 <br/> https://blog.csdn.net/wh_19910525/article/details/7554489 <br/>
+5. git 通过ssh 进行认证连接进行认证连接 <br/>
 https://www.jianshu.com/p/ee27cd2cf8b0 <br/>
 ### 2018年3月6日 —— #3
