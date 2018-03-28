@@ -106,7 +106,8 @@ Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvald
   另外，```git remote rm test``` 删除远程仓库 **test**
   * ```git pull origin master``` 从远程仓库 **origin** 拉取master分支并且合并到当前的工作区，相当于 ```git fetch``` + ```git merge```
   * ```git push origin master``` 将当前已提交的代码推送到远程仓库 **origin** 的master分支
-  * ```git rebase``` 
+  * ```git rebase``` 用于合并两个分支，与 ```git merge``` 类似，不同之处在于：
+    *
 
 
 ## 6. Git相关场景说明
@@ -214,4 +215,5 @@ Git教程 http://www.runoob.com/git/git-tutorial.html <br/>
 详细透彻解读Git与SVN的区别（集中式VS分布式）：<br/>
 http://blog.csdn.net/hellow__world/article/details/72529022 <br/>
 如何理解 Git 的分布式？：https://www.zhihu.com/question/20093241
+git merge 和 git rebase 小结 https://blog.csdn.net/wh_19910525/article/details/7554489
 ### 2018年3月6日 —— #3
