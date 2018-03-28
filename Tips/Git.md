@@ -106,8 +106,17 @@ Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvald
   另外，```git remote rm test``` 删除远程仓库 **test**
   * ```git pull origin master``` 从远程仓库 **origin** 拉取master分支并且合并到当前的工作区，相当于 ```git fetch``` + ```git merge```
   * ```git push origin master``` 将当前已提交的代码推送到远程仓库 **origin** 的master分支
-  * ```git rebase``` 用于合并两个分支，与 ```git merge``` 类似，不同之处在于：
-    *
+  * ```git rebase``` 用于合并两个分支，可以简化分支版本的控制；功能与 ```git merge``` 类似，不同之处在于：
+
+    * **git merge** 相当于在pull线上代码时进行了一次合并提交
+
+      ![git_merge](https://raw.githubusercontent.com/XianZhou/Jotting/master/img/git/git_merge.jpg)
+
+    * **git rebase** 可以让自己的分支看起来没有经过任何合并
+
+      ![git_rebase](https://raw.githubusercontent.com/XianZhou/Jotting/master/img/git/git_rebase.jpg)
+
+    * “合并”遇到冲突时，Git会停止rebase并要求先解决冲突，解决完冲突后，使用 ```git add``` 命令去更新暂存区，然后执行 ```git rebase --continue``` 来继续rebase <br/> ```git rebase --abort``` 可以用于终止rebase操作
 
 
 ## 6. Git相关场景说明
