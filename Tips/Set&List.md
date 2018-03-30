@@ -3,7 +3,8 @@
 **Set与List都继承了Collection类，而Collection继承了Iterable类**
 
 ## 1. Collection 集合
-集合，包括多个元素的对象。Java的集合主要有两种Collection和Map，两个是独立的类，各自包含一些子类
+集合，包括多个元素的对象
+Java的集合主要有两种Collection和Map，两个是独立的类，各自包含一些子类
 ### 1.1 Collection的遍历
   * for-each语法
   ``` java
