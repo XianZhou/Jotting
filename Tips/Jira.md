@@ -33,11 +33,9 @@ issueKey可以从Jira界面的问题列表中看到，issueKey一般为 ```proje
 * Create issue  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```POST /rest/api/2/issue```
 通过JSON表达式新建一个 **issue** 或者 **sub-task** <br/>
 在此介绍基本的JSON表达式字段 <br/>
-
  * issue
-
-  ```JSON
-  {
+ ```JSON
+ {
 　　"fields":{
 　　　　"project":{
 　　　　　　"id":"10000 (projectId)"
@@ -66,21 +64,20 @@ issueKey可以从Jira界面的问题列表中看到，issueKey一般为 ```proje
 　　　　　　{}
 　　　　]
 　　}
-}
-  ```
+ }
+ ```
 
- * sub-task，与上面不同之处在于
-
+  * sub-task，与上面不同之处在于
   ```JSON
   {
- 　　"fields":{
- 　　　　"issuetype":{
- 　　　　　　"id":"11111 (子任务类型)"
- 　　　　},
- 　　　　"parent":{
- 　　　　　　"key":"issueIdOrKey"
- 　　　　}
- 　　}
+　　"fields":{
+　　　　"issuetype":{
+　　　　　　"id":"11111 (子任务类型)"
+　　　　},
+　　　　"parent":{
+　　　　　　"key":"issueIdOrKey"
+　　　　}
+　　}
  }
   ```
 
@@ -99,6 +96,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 ```
 * Http Get
+
   ```Java
   String sendHttpGET(String url){
       HttpURLConnection httpConn = (HttpURLConnection) requestUrl.openConnection();
@@ -107,19 +105,20 @@ import java.net.URL;
   }
   ```
 * Http Post
-  ```Java
-  String sendHttpPOST(String url, String data){}
-      HttpURLConnection httpConn = (HttpURLConnection) requestUrl.openConnection();
-      httpConn.setRequestMethod("POST");
-      httpConn.setRequestProperty("Authorization", "Basic BASE64");
-      httpConn.setRequestProperty("Content-Type", "application/json");
-      httpConn.setDoOutput(true);
-      httpConn.setDoInput(true);
-      OutputStream out = httpConn.getOutputStream();
-      if (data != null) {
-          out.write(data.getBytes("UTF-8"));
-      }
-      out.flush();
-      out.close();
-}
+
+    ```java
+    String sendHttpPOST(String url, String data){}
+        HttpURLConnection httpConn = (HttpURLConnection) requestUrl.openConnection();
+        httpConn.setRequestMethod("POST");
+        httpConn.setRequestProperty("Authorization", "Basic BASE64");
+        httpConn.setRequestProperty("Content-Type", "application/json");
+        httpConn.setDoOutput(true);
+        httpConn.setDoInput(true);
+        OutputStream out = httpConn.getOutputStream();
+        if (data != null) {
+            out.write(data.getBytes("UTF-8"));
+        }
+        out.flush();
+        out.close();
+    }
     ```
