@@ -36,48 +36,48 @@ issueKey可以从Jira界面的问题列表中看到，issueKey一般为 ```proje
   * issue
   ```JSON
   {
-  　　"fields":{
-  　　　　"project":{
-  　　　　　　"id":"10000 (projectId)"
-  　　　　},
-  　　　　"summary":"something's wrong (标题)",
-  　　　　"issuetype":{
-  　　　　　　"id":"10104 (某种issue type: GET /rest/api/2/issuetype)"
-  　　　　},
-  　　　　"assignee":{
-  　　　　　　"name":"homer (经办人)"
-  　　　　},
-  　　　　"reporter":{
-  　　　　　　"name":"smithers (报告人)"
-  　　　　},
-  　　　　"priority":{
-  　　　　　　"id":"1 (优先级类型: GET /rest/api/2/priority)"
-  　　　　},
-  　　　　"versions":[
-  　　　　　　{}
-  　　　　],
-  　　　　"description":"description (说明，支持markdown语法，可往此处写链接等)",
-  　　　　"fixVersions":[
-  　　　　　　{}
-  　　　　],
-  　　　　"components":[
-  　　　　　　{}
-  　　　　]
-  　　}
-  }
+　　"fields":{
+　　　　"project":{
+　　　　　　"id":"10000 (projectId)"
+　　　　},
+　　　　"summary":"something's wrong (标题)",
+　　　　"issuetype":{
+　　　　　　"id":"10104 (某种issue type: GET /rest/api/2/issuetype)"
+　　　　},
+　　　　"assignee":{
+　　　　　　"name":"homer (经办人)"
+　　　　},
+　　　　"reporter":{
+　　　　　　"name":"smithers (报告人)"
+　　　　},
+　　　　"priority":{
+　　　　　　"id":"1 (优先级类型: GET /rest/api/2/priority)"
+　　　　},
+　　　　"versions":[
+　　　　　　{}
+　　　　],
+　　　　"description":"description (说明，支持markdown语法，可往此处写链接等)",
+　　　　"fixVersions":[
+　　　　　　{}
+　　　　],
+　　　　"components":[
+　　　　　　{}
+　　　　]
+　　}
+}
   ```
   * sub-task，与上面不同之处在于
   ```JSON
   {
-  　　"fields":{
-  　　　　"issuetype":{
-  　　　　　　"id":"11111 (子任务类型)"
-  　　　　},
-        "parent": {
-           "key": "issueIdOrKey"
-        }
-  　　}
-  }
+ 　　"fields":{
+ 　　　　"issuetype":{
+ 　　　　　　"id":"11111 (子任务类型)"
+ 　　　　},
+ 　　　　"parent":{
+ 　　　　　　"key":"issueIdOrKey"
+ 　　　　}
+ 　　}
+ }
   ```
 * 给issue添加关注人 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```POST /rest/api/2/issue/{issueIdOrKey}/watchers``` <br/>
 **参数："fred"** <br/>
