@@ -33,7 +33,8 @@ issueKey可以从Jira界面的问题列表中看到，issueKey一般为 ```proje
 * Create issue  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```POST /rest/api/2/issue```
 通过JSON表达式新建一个 **issue** 或者 **sub-task** <br/>
 在此介绍基本的JSON表达式字段 <br/>
-  * issue
+
+ * issue
 
   ```JSON
   {
@@ -68,7 +69,7 @@ issueKey可以从Jira界面的问题列表中看到，issueKey一般为 ```proje
 }
   ```
 
-  * sub-task，与上面不同之处在于
+ * sub-task，与上面不同之处在于
 
   ```JSON
   {
@@ -82,7 +83,7 @@ issueKey可以从Jira界面的问题列表中看到，issueKey一般为 ```proje
  　　}
  }
   ```
-  
+
 * 给issue添加关注人 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```POST /rest/api/2/issue/{issueIdOrKey}/watchers``` <br/>
 **参数："fred"** <br/>
 每次只能添加一个人，代码中，多个人可以先如下保存；String切分，注意传输数据形式要符合JSON格式，勿忘 **""**
