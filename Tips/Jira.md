@@ -96,23 +96,23 @@ import java.net.URL;
 * Http Get
   ```Java
   String sendHttpGET(String url){
-    HttpURLConnection httpConn = (HttpURLConnection) requestUrl.openConnection();
-    httpConn.setRequestMethod("GET");
-    httpConn.setRequestProperty("Authorization", "Basic BASE64");
+      HttpURLConnection httpConn = (HttpURLConnection) requestUrl.openConnection();
+      httpConn.setRequestMethod("GET");
+      httpConn.setRequestProperty("Authorization", "Basic BASE64");
   }
   ```
 * Http Post
   ```Java
   String sendHttpPOST(String url, String data){}
-    HttpURLConnection httpConn = (HttpURLConnection) requestUrl.openConnection();
-    httpConn.setRequestMethod("POST");
-    httpConn.setRequestProperty("Authorization", "Basic BASE64");
-    httpConn.setRequestProperty("Content-Type", "application/json");
-    httpConn.setDoOutput(true);
-    httpConn.setDoInput(true);
-    OutputStream out = httpConn.getOutputStream();
-    if (data != null) {
-        out.write(data.getBytes("UTF-8"));
+      HttpURLConnection httpConn = (HttpURLConnection) requestUrl.openConnection();
+      httpConn.setRequestMethod("POST");
+      httpConn.setRequestProperty("Authorization", "Basic BASE64");
+      httpConn.setRequestProperty("Content-Type", "application/json");
+      httpConn.setDoOutput(true);
+      httpConn.setDoInput(true);
+      OutputStream out = httpConn.getOutputStream();
+      if (data != null) {
+          out.write(data.getBytes("UTF-8"));
       }
       out.flush();
       out.close();
