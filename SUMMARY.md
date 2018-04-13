@@ -7,5 +7,5 @@
     * [Git](Tips/Git.md)
     * [Set&List](Tips/Set&List.md)
     * [JIRA](Tips/Jira.md)
-    * [Ldap](Tips/Ldap.md)
+    * [Ldap](Tips/Ldap&DNS.md)
 
