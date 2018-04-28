@@ -74,7 +74,7 @@ DNS树的每个节点有一个**标号**， 每个标号最多包含63个字符�
   * 递归解析：
     * 1 客户机向```.edu域名服务器(学校LDNS)```发送查询请求，希望获知域名**test.china.huawei.com**对应的IP地址
     * 2 .edu域名服务器发现自己不是该域名的授权者，将该请求发送给**根域名服务器**（全球共13台）
-    * 3 根域名服务器发现自己也不是该域名的授权者，将该请求发送给```主域名服务器（gTLD Server）```—— .com域名服务器
+    * 3 根域名服务器发现自己也不是该域名的授权者，将该请求发送给```主域名服务器（gTLD Server）``` —— .com域名服务器
     * 4 .com域名服务器发现自己也不是该域名的授权者，将该请求发送给.huawei.com域名服务器
     * 5 .huawei.com域名服务器发现自己也不是该域名的授权者，将该请求发送给 .china.huawei.com域名服务器
     * 6 .china.huawei.com域名服务器发现自己是该域名的授权者，查询得到该域名对应的IP地址，并将其发送给.huawei.com域名服务器
@@ -83,21 +83,21 @@ DNS树的每个节点有一个**标号**， 每个标号最多包含63个字符�
     * 9 根域名服务器将其发送给.edu域名服务器（LDNS）
     * 10 .edu域名服务器将其发送给客户机
 
-    ![dns_recursion](https://raw.githubusercontent.com/XianZhou/Tips/master/img/jotting/ldap/dns_recursion.jpg)
+    ![dns_recursion](https://raw.githubusercontent.com/XianZhou/Jotting/master/img/Tips/ldap/dns_recursion.jpg)
 
   * 迭代解析
     * 1 客户机向```.edu域名服务器(学校LDNS)```发送查询请求，希望获知域名**test.china.huawei.com**对应的IP地址
     * 2 .edu域名服务器发现自己不是该域名的授权者，向客户机返回**根域名服务器**的IP地址
     * 3 客户机向根域名服务器发送查询请求
-    * 4 根域名服务器发现自己也不是该域名的授权者，向客户机返回.com域名服务器的IP地址。
-    * 5. 客户机向.com域名服务器发送查询请求。
-6. .com域名服务器发现自己也不是该域名的授权者，向客户机返回.huawei.com域名服务器的IP地址。
-7. 客户机向.huawei.com域名服务器发送查询请求。
-8. .huawei.com域名服务器发现自己也不是该域名的授权者，向客户机返回.china.huawei.com域名服务器的IP地址。
-9. 客户机向.china.huawei.com域名服务器发送查询请求。
-10. .china.huawei.com域名服务器发现自己是该域名的授权者，查询得到该域名对应的IP地址，并将其发送给客户机。
+    * 4 根域名服务器发现自己也不是该域名的授权者，向客户机返回```主域名服务器（gTLD Server）``` —— .com域名服务器的IP地址
+    * 5 客户机向.com域名服务器发送查询请求
+    * 6 .com域名服务器发现自己也不是该域名的授权者，向客户机返回.huawei.com域名服务器的IP地址
+    * 7 客户机向.huawei.com域名服务器发送查询请求
+    * 8 .huawei.com域名服务器发现自己也不是该域名的授权者，向客户机返回 .china.huawei.com域名服务器的IP地址
+    * 9 客户机向.china.huawei.com域名服务器发送查询请求
+    * 10 .china.huawei.com域名服务器发现自己是该域名的授权者，查询得到该域名对应的IP地址，并将其发送给客户机
 
-![dns_recursion](https://raw.githubusercontent.com/XianZhou/Tips/master/img/jotting/ldap/dns_iteration.jpg)
+    ![dns_recursion](https://raw.githubusercontent.com/XianZhou/Jotting/master/img/Tips/ldap/dns_iteration.jpg)
 
 ## 参考
 1. DNS https://blog.csdn.net/rentian1/article/details/52288545 <br/>
