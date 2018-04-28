@@ -8,5 +8,5 @@
     * [Set&List](Tips/Set&List.md)
     * [JIRA](Tips/Jira.md)
     * [Ldap&DNS](Tips/Ldap&DNS.md)
-    * [SpringbootNote](Tips/SpringbootNote,md)
+    * [SpringbootNote](Tips/SpringbootNote.md)
 
