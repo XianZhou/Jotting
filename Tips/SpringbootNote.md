@@ -55,9 +55,8 @@ Swagger可以方便工程测试以及文档的编写，具体用法是：运行�
 * 3 在**Application**类添加Swagger注解
   ```java
   @EnableSwagger2    //允许Swagger
-@SpringBootApplication
-public class Application {
-
+  @SpringBootApplication
+  public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
