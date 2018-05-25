@@ -64,6 +64,17 @@ Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvald
 ### 4.8 git mv
   重命名 ```git mv README  README.md```
 
+### 4.9 git branch -vv
+显示本地分支和远端分支的映射关系
+
+### 4.10  建立本地分支和远端分支关系
+```git branch --set-upstream-to=origin/<远端branch_name> <本地branch_name>```
+```shell
+➜  Jotting git:(master) git branch --set-upstream-to=origin/master master     
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+```
+
+
 ## 5. Git进阶命令
 ### 5.1 分支管理
   * ```git branch``` 列出本地分支 ```git branch -a``` 列出本地和远程分支
@@ -117,7 +128,8 @@ Git是目前世界上最先进的分布式版本控制系统，是 Linus Torvald
   test	https://github.com/XianZhou/test.git (push)
   ```
   另外，```git remote rm test``` 删除远程仓库 **test**
-  * ```git pull origin master``` 从远程仓库 **origin** 拉取master分支并且合并到当前的工作区，相当于 ```git fetch``` + ```git merge```
+  * ```git pull origin master``` 从远程仓库 **origin** 拉取master分支并且合并到当前的工作区，相当于 ```git fetch``` + ```git merge``` <br/>
+  如果只想用 ```git pull```，则需要建立track关系，见4.10
   * ```git push origin master``` 将当前已提交的代码推送到远程仓库 **origin** 的master分支
   * ```git rebase``` 用于合并两个分支，可以简化分支版本的控制；功能与 ```git merge``` 类似，不同之处在于：
 
