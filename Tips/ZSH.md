@@ -62,5 +62,21 @@ ZSH_THEME="robbyrussell"
   chsh -s /bin/zsh
   ```
 
+## 4. 遇见的问题
+#### 4.1 zsh 和 bash 在python安装xgboost中出现问题
+zsh无法通过anaconda打开terminals，且无法执行conda命令 <br/>
+解决方案： 将zsh改成bash，重新在python安装xgboost；conda命令解决方案如下
+#### 4.2 maven：mvn command not found
+下载maven时，会默认在 **~/.bash_profile** 添加
+```shell
+# added maven
+export M2_HOME=/path/apache-maven-3.5.2
+export PATH=$PATH:$M2_HOME/bin
+```
+需要在 **~/.zshrc** 添加同样内容，不用重启终端生效
+```
+source ~/.zshrc
+```
+
 
 ### 2018年3月6日 —— #2
