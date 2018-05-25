@@ -1,5 +1,11 @@
 # Thrift
 
+thrift是一个软件框架，用来进行可扩展且跨语言的服务的开发。它结合了功能强大的软件堆栈和代码生成引擎，以构建在 C++, Java, Go,Python, PHP, Ruby, Erlang, Perl, Haskell, C#, Cocoa, JavaScript, Node.js, Smalltalk, and OCaml 这些编程语言间无缝结合的、高效的服务。 <br/>
+实习中使用其进行服务之间数据的相互调用，原来的方法是使用http：<br/>
+```java
+String result = HttpUtil.sendHttpGET(otherProjectDomain + "/v1/function", null);
+```
+
 ## 1 . 下载与安装
 ```
 brew install thrift
@@ -25,6 +31,7 @@ service ProjectRPC{
     User getUser(1:string name)
 }
 ```
+note: 没有Date数据结构，只能通过String(timestamp)转换
 keyword: **namespace** 和 **service ProjectRPC** <br/>
 据我理解：一个rpc工程会有很多的 **${Project}.idl** 文件，每个文件代表着其他工程暴露给rpc的接口有哪些，其服务端和客户端依据自身需求import不同的工程名
 
@@ -165,7 +172,6 @@ ThriftBeanConfig.java
          return iface;
      }
 
-
      @Override
      public void destroy() throws Exception {
          logger.info("释放 thrift 连接");
@@ -182,7 +188,6 @@ public class TestController {
 
     @Autowired
     private ProjectRPC.Iface projectRPCService;
-
 
     @RequestMapping(value = "/test/thrift/ping", method = RequestMethod.GET)
     @CrossOrigin("*")
