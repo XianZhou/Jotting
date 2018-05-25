@@ -9,4 +9,5 @@
     * [JIRA](Tips/Jira.md)
     * [Ldap&DNS](Tips/Ldap&DNS.md)
     * [SpringbootNote](Tips/SpringbootNote.md)
+    * [Thrift](Tips/Thrift.md)
 
