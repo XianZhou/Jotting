@@ -10,4 +10,6 @@
     * [Ldap&DNS](Tips/Ldap&DNS.md)
     * [SpringbootNote](Tips/SpringbootNote.md)
     * [Thrift](Tips/Thrift.md)
+    * [Json](Tips/Json.md)
+    * [Map](Tips/Map.md)
 
