@@ -1,6 +1,6 @@
 # JSON序列化
 
-## 1. fastjson
+## 1. FastJson
 ``` java
 //json字符串-简单对象型
 private static final String  JSON_OBJ_STR = "{\"studentName\":\"lily\",\"studentAge\":12}";
@@ -24,7 +24,7 @@ System.out.println("studentName:  " + jsonObject.getString("studentName"));
 ```
 * JSON对象转为JSON格式字符串
 ```java
-String jsonString = JSONObject.toJSONString(jsonObject);
+String jsonString = JSON.toJSONString(jsonObject);
 ```
 * JSON字符串(数组类型)转换为JSONArray
 ```java
@@ -32,7 +32,7 @@ JSONArray jsonArray = JSONArray.parseArray(JSON_ARRAY_STR);
 ```
 * JSONArray转换为JSON字符串(数组类型)
 ```java
-String jsonString = JSONArray.toJSONString(jsonArray);
+String jsonString = JSON.toJSONString(jsonArray);
 ```
 * 复杂JSON格式字符串转换为JSONObject
 ```java
@@ -62,7 +62,7 @@ JSONArray jsonArray = (JSONArray) JSONArray.toJSON(students);
 ```
 * 复杂JavaBean转换为Json对象
 ```java
-JSONObject jsonObject1 = (JSONObject) JSONObject.toJSON(teacher);
+JSONObject jsonObject = (JSONObject) JSONObject.toJSON(teacher);
 ```
 
 
@@ -82,7 +82,6 @@ public class Model implements Serializable{
     //@Column(name="content", columnDefinition="TEXT", nullable=true) 同下
     @Type(type = "text")
     private String modelInfo;
-
 }
 ```
 **lombok.Data** 会将 **isOnline** 属性的getter和setter方法设置为：<br/>
