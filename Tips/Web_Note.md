@@ -190,17 +190,22 @@ css js
 * 引入
   * 直接引入下载文件的相对路径；与Internet不通无法使用CDN加速，可将文件下载到本地引用
   * 引入CDN服务器下的bootstrap，CDN是Content Delivery Network的缩写，Bootstrap把自己的css、js等文件托管到某一个网络服务器上使用时调用，不需要下载 Bootstrap
+
 ```HTML
 <!-- 版本自选 -->
 <!-- 核心 css 文件 -->
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
 <!-- 可选的Bootstrap主题文件 -->
 <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap-theme.min.css"></script>
+
 <!-- jQuery文件 务必在 bootstrap.min.js 之前引入 -->
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+
 <!-- 核心 JavaScript 文件 -->
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 ```
+
 * 使用：参照网址 https://getbootstrap.com/docs/4.1/components/alerts/
 
 ## 6. js 里嵌套 html
