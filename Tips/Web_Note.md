@@ -221,3 +221,12 @@ function Panel(apple) {
   return htmlText;
 }
 ```
+
+## 7. web知识
+* 浏览器开发者工具：
+  * **Toggle device toolbar** : 移动端显示
+  * **Elements** 可以看到页面的源代码
+  * **Source** 可以在侧边选择前端代码文件如：js，然后开始调试
+  * **Network** 可以看到前端向后端发请求得到的结果，一般选择 **XHR**
+  * **Console** 可以看到前端代码 ```console.info()```的内容，相当于后台的 ```System.out.print()```
+* IDEA中，**js** 和 **css** 文件的修改可以直接 **Build Project** 更新，不用 **Run Application** 重新跑代码执行
